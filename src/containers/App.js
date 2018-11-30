@@ -7,69 +7,6 @@ import Jumbotron from '../components/Jumbotron/Jumbotron'
 import GameScreen from '../components/GameScreen/GameScreen'
 import Footer from '../components/Footer/Footer'
 
-const images = [
-  {
-    id: 1,
-    name: 'tile1.jpg',
-    clicked: false
-  },
-  {
-    id: 2,
-    name: 'tile2.jpg',
-    clicked: false
-  },
-  {
-    id: 3,
-    name: 'tile3.jpg',
-    clicked: false
-  },
-  {
-    id: 4,
-    name: 'tile4.jpg',
-    clicked: false
-  },
-  {
-    id: 5,
-    name: 'tile5.jpg',
-    clicked: false
-  },
-  {
-    id: 6,
-    name: 'tile6.jpg',
-    clicked: false
-  },
-  {
-    id: 7,
-    name: 'tile7.jpg',
-    clicked: false
-  },
-  {
-    id: 8,
-    name: 'tile8.jpg',
-    clicked: false
-  },
-  {
-    id: 9,
-    name: 'tile9.jpg',
-    clicked: false
-  },
-  {
-    id: 10,
-    name: 'tile10.jpg',
-    clicked: false
-  },
-  {
-    id: 11,
-    name: 'tile11.jpg',
-    clicked: false
-  },
-  {
-    id: 12,
-    name: 'tile12.jpg',
-    clicked: false
-  }
-]
-
 class App extends Component {
 
   state = this.initialState()
@@ -82,7 +19,68 @@ class App extends Component {
     hiScore: highscore,
     score: 0,
     consoleMessage: "Click an image to start!",
-    imageArray: images
+    images: [
+      {
+        id: 1,
+        name: 'tile1.jpg',
+        clicked: false
+      },
+      {
+        id: 2,
+        name: 'tile2.jpg',
+        clicked: false
+      },
+      {
+        id: 3,
+        name: 'tile3.jpg',
+        clicked: false
+      },
+      {
+        id: 4,
+        name: 'tile4.jpg',
+        clicked: false
+      },
+      {
+        id: 5,
+        name: 'tile5.jpg',
+        clicked: false
+      },
+      {
+        id: 6,
+        name: 'tile6.jpg',
+        clicked: false
+      },
+      {
+        id: 7,
+        name: 'tile7.jpg',
+        clicked: false
+      },
+      {
+        id: 8,
+        name: 'tile8.jpg',
+        clicked: false
+      },
+      {
+        id: 9,
+        name: 'tile9.jpg',
+        clicked: false
+      },
+      {
+        id: 10,
+        name: 'tile10.jpg',
+        clicked: false
+      },
+      {
+        id: 11,
+        name: 'tile11.jpg',
+        clicked: false
+      },
+      {
+        id: 12,
+        name: 'tile12.jpg',
+        clicked: false
+      }
+    ]
   }
 }
 
@@ -97,7 +95,7 @@ class App extends Component {
    }
    
    checkIfClickedBefore = (id) => {
-    let images = [...this.state.imageArray]
+    let images = [...this.state.images]
     let hiScore = this.state.hiScore
     let consoleMessage = this.state.consoleMessage
     let score = this.state.score
@@ -123,7 +121,7 @@ class App extends Component {
    
 
    clickImageHandler = (id) => {
-     const imageIndex = images.findIndex(img => {
+     const imageIndex = this.state.images.findIndex(img => {
        return img.id === id;
      });
      this.checkIfClickedBefore(imageIndex)
@@ -144,7 +142,7 @@ class App extends Component {
         <Scoreboard score={this.state.score} hiScore={this.state.hiScore}/>
         <Jumbotron />
         <GameScreen 
-          images={this.sortArray(images)} 
+          images={this.sortArray(this.state.images)} 
           clicked={this.clickImageHandler}/>
         <Footer />
       </div>
