@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Clicky-Game/static/media/aas.4e04d64d.JPG"
   },
   {
-    "revision": "ea079e327f2a45236d7a",
+    "revision": "cffa8167402d62e89839",
     "url": "/Clicky-Game/static/css/main.b3e8ebce.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/Clicky-Game/static/media/warcraft.58dc21d2.jpg"
   },
   {
-    "revision": "ea079e327f2a45236d7a",
-    "url": "/Clicky-Game/static/js/main.ea079e32.chunk.js"
+    "revision": "cffa8167402d62e89839",
+    "url": "/Clicky-Game/static/js/main.cffa8167.chunk.js"
   },
   {
     "revision": "02c6a507e2c7ad9f518392f9adcf5e90",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/Clicky-Game/static/media/warcraft.6119b79b.png"
   },
   {
-    "revision": "4d078a03d282b943f6d06e241a89b0bc",
+    "revision": "739478b10eefe4c35f5c4f358a77fcfa",
     "url": "/Clicky-Game/index.html"
   }
 ];
